@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards of Pokémon - Boutique de Cartes Pokémon</title>
+    <style>
+        :root {
+            --pokemon-yellow: #FFCB05;
+            --pokemon-blue: #2A75D3;
+            --dark-bg: #121212;
+            --card-bg: #1E1E1E;
+            --text-light: #FFFFFF;
+            --text-gray: #B3B3B3;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--pokemon-yellow);
+        }
+
+        .welcome-title {
+            font-size: 2.5rem;
+            color: var(--pokemon-yellow);
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 0px var(--pokemon-blue);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1a1a1a;
+            padding: 10px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--pokemon-yellow);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Bannière Anniversaire */
+        .anniversary-banner {
+            background: linear-gradient(135deg, #4A148C, #8E24AA);
+            border: 3px solid var(--pokemon-yellow);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(255, 203, 5, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .anniversary-banner h2 {
+            font-size: 2.2rem;
+            color: var(--pokemon-yellow);
+            margin: 0 0 10px 0;
+        }
+
+        .anniversary-banner p {
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .countdown {
+            font-size: 1.1rem;
+            color: #FFEB3B;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Sections Produits */
+        .section-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--pokemon-blue);
+            padding-left: 10px;
+            margin-bottom: 20px;
+            color: var(--pokemon-yellow);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 5px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(42, 117, 211, 0.4);
+            border-color: var(--pokemon-blue);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-gray);
+            font-weight: bold;
+            margin-bottom: 15px;
+            border: 2px dashed #444;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: var(--pokemon-yellow);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn-buy {
+            background-color: var(--pokemon-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: #1e5099;
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 5px;
+            border-top: 2px solid #333;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="welcome-title">Bienvenue dans Cards of Pokémon</h1>
+        <p class="subtitle">Votre boutique ultime de cartes et boosters à l'unité</p>
+    </header>
+
+    <nav>
+        <a href="#anniversaire">30 Ans Pokémon</a>
+        <a href="#cartes">Cartes à l'unité</a>
+        <a href="#boosters">Boosters</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Section Événement Anniversaire -->
+        <section id="anniversaire" class="anniversary-banner">
+            <h2>🎉 ÉVÉNEMENT SPÉCIAL 🎉</h2>
+            <p>Célébrez avec nous le 30ème Anniversaire de Pokémon le 16 Septembre !</p>
+            <div class="countdown">Des offres exclusives et des produits collectors seront disponibles ce jour-là !</div>
+        </section>
+
+        <!-- Section Cartes à l'unité -->
+        <section id="cartes">
+            <h2 class="section-title">Cartes à l'unité</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <div class="product-image">[Image Dracaufeu VMAX]</div>
+                    <div class="product-name">Dracaufeu VMAX - Shiny</div>
+                    <div class="product-price">79,99 €</div>
+                    <button class="btn-buy" onclick="alert('Ajouté au panier ! (Exemple)')">Acheter</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">[Image Pikachu Full Art]</div>
+                    <div class="product-name">Pikachu - Illustration Spéciale</div>
+                    <div class="product-price">24,50 €</div>
+                    <button class="btn-buy" onclick="alert('Ajouté au panier ! (Exemple)')">Acheter</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">[Image Mewtwo Secret]</div>
+                    <div class="product-name">Mewtwo VSTAR - Secrète</div>
+                    <div class="product-price">45,00 €</div>
+                    <button class="btn-buy" onclick="alert('Ajouté au panier ! (Exemple)')">Acheter</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Boosters -->
+        <section id="boosters" style="margin-top: 40px;">
+            <h2 class="section-title">Boosters de Cartes</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <div class="product-image">[Booster Évolution Céleste]</div>
+                    <div class="product-name">Booster Évolution Céleste</div>
+                    <div class="product-price">6,50 €</div>
+                    <button class="btn-buy" onclick="alert('Ajouté au panier ! (Exemple)')">Acheter</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">[Booster Destinées Radieuses]</div>
+                    <div class="product-name">Booster Destinées Radieuses</div>
+                    <div class="product-price">5,99 €</div>
+                    <button class="btn-buy" onclick="alert('Ajouté au panier ! (Exemple)')">Acheter</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">[Booster Écarlate et Violet]</div>
+                    <div class="product-name">Booster Écarlate et Violet (Série de Base)</div>
+                    <div class="product-price">4,99 €</div>
+                    <button class="btn-buy" onclick="alert('Ajouté au panier ! (Exemple)')">Acheter</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cards of Pokémon. Tous droits réservés. Les images et la marque Pokémon appartiennent à Nintendo / Creatures Inc. / Game Freak.</p>
+    </footer>
+
+</body>
+</html>
